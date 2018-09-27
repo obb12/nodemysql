@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title> ToDo App </title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100"     rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-3Ivskwia8Fui5tbQi+RW4DgTkJ8d+hW7mLe7Yk89ibmD9482VECh0WFof8kIEjwI" crossorigin="anonymous">
+  </head>
+<body>
+  <div class="container">
+     <h2> A Simple ToDo List App </h2>
+
+<form action ="/addtask" method="POST">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Add Task</label>
+    <input type="text" name="addtask" class="form-control"  placeholder="add new task">
+  </div>
+
+
+  <button type="submit" class="btn btn-primary">Add Task</button>
+</form>
+<h2> Added Task </h2>
+   <% for( var i = 0; i < task.length; i++){ %>
+     <div class="form-group form-check">
+
+<input type="checkbox"class="form-check-input" name="check" value="<%= task[i].id %>" />
+  <label class="form-check-label" for="exampleCheck1"><%= task[i].todotext %></label>
+<% } %>
+</div>
+</body>
+</html>
